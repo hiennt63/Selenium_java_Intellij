@@ -1,9 +1,11 @@
 package WebDriver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -30,11 +32,29 @@ public class Topic_22_Window_Tab_Selenium4x {
 	public void TC_01_Basic_Window()  {
 		driver.get("https://kynaenglish.vn/");
 		System.out.println("ID window kynaenglish: " + driver.toString());
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
 
 		// Mở tab mới /window mới
-		WebDriver facebookKyna = driver.switchTo().newWindow(WindowType.TAB);
-		facebookKyna.get("https://www.facebook.com/Kynaenglish1kem1");
-		System.out.println("ID window facebook Kyna: "+ facebookKyna.toString());
+		WebDriver BlogKyna = driver.switchTo().newWindow(WindowType.TAB);
+		BlogKyna.get("https://kynaforkids.vn/blog/");
+		System.out.println("ID Blog Kyna: "+ BlogKyna.toString());
+		System.out.println(BlogKyna.getTitle());
+		System.out.println(BlogKyna.getCurrentUrl());
+
+		BlogKyna.findElement(By.cssSelector("input[placeholder='Search …']")).sendKeys("Trò chơi tiếng anh");
+		BlogKyna.findElement(By.cssSelector("input.search-submit")).click();
+		sleepInSeconds(3);
+
+		switchToWindowByTitle("KYNA ENGLISH - MANG LẠI NHIỀU TRẢI NGHIỆM HỌC TẬP HIỆU QUẢ HƠN'");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		sleepInSeconds(3);
+
+		driver.switchTo().newWindow(WindowType.TAB).get("https://www.tiktok.com/@kynaenglish1kem1");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+
 	}
 
 
