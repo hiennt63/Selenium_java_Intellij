@@ -3,6 +3,7 @@ package WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -26,6 +27,7 @@ public class Topic_21_Window_Tab {
 
 		//driver = new FirefoxDriver();
 		driver = new ChromeDriver();
+		// driver = new EdgeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 
