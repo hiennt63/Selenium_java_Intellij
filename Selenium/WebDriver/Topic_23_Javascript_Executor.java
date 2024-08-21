@@ -41,7 +41,8 @@ public class Topic_23_Javascript_Executor {
 		Assert.assertEquals(techpadaURL,"http://live.techpanda.org/");
 
 		hightlightElement("//a[text()='Mobile']");
-		clickToElementByJS("//a[text()='Mobile']");
+		// thao tác js ko phai hanh vi cua enduser
+		driver.findElement(By.xpath("//a[text()='Mobile']"));
 		sleepInSecond(3);
 
 		hightlightElement("//a[text()='Samsung Galaxy']/parent::h2/following-sibling::div[@class='actions']/button");
@@ -71,10 +72,25 @@ public class Topic_23_Javascript_Executor {
 
 	}
 
-
 	@Test
-	public void TC_02 (){
+	public void TC_02_HTML5(){
+		driver.get("https://sieuthimaymocthietbi.com/account/register");
+		sleepInSecond(3);
 
+		driver.findElement(By.xpath(	"//button[text()='Đăng ký']")).click();
+		sleepInSecond(3);
+		Assert.assertEquals(getElementValidationMessage("//input[@id='lastName']"),"Please fill out this field.");
+
+		driver.findElement(By.xpath(	"//input[@id='lastName']")).sendKeys("Nguyễn");
+		driver.findElement(By.xpath(	"//button[text()='Đăng ký']")).click();
+		sleepInSecond(3);
+		Assert.assertEquals(getElementValidationMessage("//input[@id='firstName']"),"Please fill out this field.");
+
+		driver.findElement(By.xpath(	"//input[@id='lastName']")).sendKeys("Nguyễn");
+		driver.findElement(By.xpath(	"//input[@id='firstName']")).sendKeys("Hiền");
+		driver.findElement(By.xpath(	"//button[text()='Đăng ký']")).click();
+		sleepInSecond(3);
+		Assert.assertEquals(getElementValidationMessage("//input[@id='email']"),"Please fill out this field.");
 
 	}
 
