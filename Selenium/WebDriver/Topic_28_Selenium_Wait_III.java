@@ -3,10 +3,8 @@ package WebDriver;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -15,10 +13,9 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.Date;
-import java.util.List;
 import java.util.regex.Pattern;
 
-public class Topic_27_Selenium_Wait_III {
+public class Topic_28_Selenium_Wait_III {
 	WebDriver driver;
 
 	WebDriverWait explicitWait; // khai báo chưa khoi tao

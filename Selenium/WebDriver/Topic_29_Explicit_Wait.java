@@ -1,6 +1,5 @@
 package WebDriver;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,9 +13,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.Date;
-import java.util.regex.Pattern;
 
-public class Topic_28_Selenium_Wait_IV {
+public class Topic_29_Explicit_Wait {
 	WebDriver driver;
 
 	WebDriverWait explicitWait; // khai báo chưa khoi tao

@@ -4,21 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import javax.lang.model.element.Element;
-import javax.xml.crypto.Data;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
-public class Topic_26_Selenium_Wait_II {
+public class Topic_27_Selenium_Wait_II {
 	WebDriver driver;
 
 	WebDriverWait explicitWait;

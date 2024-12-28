@@ -14,6 +14,8 @@ public class Topic_07_String {
 		
 		String hotelms = "Welcome " + fullName +" to HN hotel" ;
 		System.out.println(hotelms);
+
+		hotelms.endsWith("hotel");
 	}
 
 
